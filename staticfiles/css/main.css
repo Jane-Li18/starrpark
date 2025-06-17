@@ -1,0 +1,1484 @@
+@import url('https://fonts.cdnfonts.com/css/lilita-one');
+@import url('https://fonts.cdnfonts.com/css/nougat');
+
+:root{ 
+    --primaryyellow:#FFD700;
+    --darkyellow:#FFC200;
+    --darkestyellow:#a88100;
+    --lightyellow:#FFECB3;
+    --black:#000000;
+    --darkgray:#333333;
+    --lightgray:#CCCCCC;
+    --white:#FFFFFF;
+
+    /* For Starr Park Logo Colors*/
+    --starrred:#f4571d;
+    --starryellow:#f9d50d;
+    --starrcyan:#079fcf; 
+    --starrlime:#11a745;
+    --starrmagenta:#fb4c87;
+}
+
+/* Esscential Code Starts */
+*{
+    font-family: 'Lilita One','Nougat';
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+    font-weight: 100;
+}
+
+*::selection{ 
+    background: var(--darkestyellow); /* For Highlighting in the website*/
+    color: var(--white);
+    font-weight: 100;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 1); 
+}
+
+* img {
+    user-select: none;
+    pointer-events: none;    
+}
+
+html{
+    font-size: 65%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: var(--black);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--darkestyellow);
+}
+
+body {
+    height: 100vh;
+    font-size: 1.5rem;
+    background: var(--white);
+    background: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Add this line */
+}
+/* Esscential Code Ends */
+
+.heading {
+    text-align: center;
+    font-size: 4rem; 
+    padding: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 1); 
+}
+
+.heading span{
+    color: var(--primaryyellow);
+    text-transform: uppercase;
+}
+
+#btnshop{
+    width: 130px;
+    padding: 5px;
+    text-transform: uppercase; 
+    color: var(--white);
+    background: var(--darkgray);
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: .5s;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    margin: 1px;
+    box-shadow: -2px 3px 0 rgba(197, 134, 0, 1);
+    /* animation: float 3s linear infinite; */
+}
+
+#btnshop::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    animation: colorChangebg .5s infinite alternate;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+#btnshop:hover::before{
+    width: 100%;
+    left: 0;
+    color: var(--white);
+    animation: colorChangebg 3.5s infinite alternate;
+}
+
+/* .btn{
+    width: 130px;
+    padding: 5px;
+    text-transform: uppercase; 
+    color: var(--white);
+    background: var(--black);
+    border: 1px solid var(--darkgray);
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 1.8rem;
+    transition: .5s;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+    margin: 1px;
+    box-shadow: -2px 3px 0 rgba(197, 134, 0, 1);
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    animation: colorChangebg .5s infinite alternate;
+    transition: .3s linear;
+    z-index: -1;
+}
+
+.btn:hover::before{
+    width: 100%;
+    left: 0;
+    color: var(--white);
+    animation: colorChangebg 4s infinite alternate;
+} */
+
+@keyframes colorChangebg {
+    0% {
+      background: var(--starrred);
+    }
+    25% {
+      background: var(--darkestyellow);
+    }
+    50% {
+      background: var(--starrcyan);
+    }
+    75% {
+      background: var(--starrlime);
+    }
+    100% {
+      background: var(--starrmagenta);
+    }
+}
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    padding: .8rem;
+    z-index: 9999;
+    position: fixed;
+    background-color: rgba(255, 194, 0, 0.5);
+    backdrop-filter: blur(10px); /* Apply a blur effect to the content behind the header */
+}
+  
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 135px 150px 0px 600px;
+    border-color: var(--black) transparent;
+    z-index: -1;
+    transform: scaleX(-1);
+}
+  
+header .logo{
+    color: var(--white);
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 9999;
+    margin: 1rem;
+}
+
+header .logo:hover{
+    animation: colorChangetxt 4s infinite alternate;
+}
+
+header .logo i{
+    color: var(--primaryyellow);
+    margin: .5rem;
+}
+
+header a i:hover{
+    color: var(--starrcyan);
+}
+
+header .navbar a{
+    color: var(--black);
+    position: relative;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin: 2rem;
+    transition: .1s;
+}
+
+header .navbar a:hover{
+    color: var(--darkgray);
+}
+
+header .navbar a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    bottom: -6px;
+    background: var(--black);
+    border-radius: 10px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+header .navbar a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+header .navbar .btnLogin-popup{
+    width: 130px;
+    height: 35px;
+    background: transparent;
+    border: 1px solid var(--darkgray);
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    color: var(--black);
+    margin-right: 5rem;
+    transition: .5s;
+}
+
+header .navbar .btnLogin-popup:hover{
+    color: var(--white);
+    background: var(--darkgray);
+}
+
+#menu-bar {
+    font-size: 3rem;
+    cursor: pointer;
+    color: var(--black);
+    border-radius: .3rem;
+    padding: .5rem 1.5rem;
+    display: none;
+}
+
+section{
+    padding: 2rem 9%;
+}
+
+/* Login Form Div Starts */
+.loginwrapper {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+    position: fixed; /* Use fixed positioning */
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 3px solid var(--darkyellow);
+    border-radius: 20px;
+    background-color: rgba(255, 194, 0, 0.5);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    overflow: hidden;
+    transform-origin: center; /* Set the transform origin to the center */
+    opacity: 0; /* Start with opacity 0 to hide the element */
+    transition: transform .5s ease, opacity .5s ease; /* Add transitions for both transform and opacity */
+}
+
+/* Add this to position the loginwrapper properly */
+.loginwrapper.active-popup {
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1); /* Scale to 1 and reposition */
+    opacity: 1; /* Show the element */
+    z-index: 9999;
+    pointer-events: auto; /* Enable pointer events for the form when active */
+
+/* Enable pointer events for elements when the pop-up is active */
+    .form-box.login input,
+    .form-box.login label,
+    .form-box.login button,
+    .form-box.login a,
+    .form-box.register input,
+    .form-box.register label,
+    .form-box.register button,
+    .form-box.register a {
+    pointer-events: auto;
+}
+}
+
+/* Initially, set pointer-events to none for the form elements inside .wrapper */
+.loginwrapper .form-box.login h2,
+.loginwrapper .form-box.login input,
+.loginwrapper .form-box.login label,
+.loginwrapper .form-box.login button,
+.loginwrapper .form-box.login a,
+.loginwrapper .form-box.login h2,
+.loginwrapper .form-box.register input,
+.loginwrapper .form-box.register label,
+.loginwrapper .form-box.register button,
+.loginwrapper .form-box.register a {
+    pointer-events: none;
+}
+
+.loginwrapper.active{
+    height: 475px;
+}
+
+.loginwrapper .form-box{
+    width: 100%;
+    padding: 30px;
+}
+
+.loginwrapper .form-box.login{
+    transition: transform .30s ease;
+    transform: translateX(0);
+}
+
+.loginwrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.loginwrapper .form-box.register{
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.loginwrapper.active .form-box.register{
+    transition: transform .30s ease;
+    transform: translateX(0);
+}
+
+.loginwrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: var(--black);
+    color: var(--white);
+    font-size: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.form-box h2{
+    font-size: 2em;
+    text-align: center;
+    color: var(--black);
+}
+
+.input-box{
+    position: relative;
+    width: 85%;
+    height: 25px;
+    border-bottom: 1px solid var(--darkgray);
+    margin: 15px 25px 15px;
+    padding: 5px;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 3px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: var(--darkgray);
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -3px;
+    min-height: 25px; /* Adjust the value as needed */
+}
+
+.input-box input{
+    width: 85%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.5rem;
+    color: var(--black);
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 10px;
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.remember-forgot{
+    font-size: 1.3rem;
+    color: var(--darkgray);
+    margin: 5px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot .terms{
+    color: var(--darkgray);
+    padding-right: 10rem;
+}
+
+.remember-forgot label input{
+    accent-color: var(--starrcyan);
+    margin-right: 10px;
+}
+
+.remember-forgot a{
+    animation: colorChangetxt 5s infinite alternate;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+    color: var(--starrred);
+}
+
+.btnreg{
+    margin-left: 40px;
+    width: 80%;
+    height: 45px;
+    background: var(--black);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.btnreg:hover{
+    background: var(--darkgray);
+}
+
+.btnlog{
+    width: 100%;
+    height: 45px;
+    background: var(--black);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--white);
+    text-transform: uppercase;
+}
+
+.btnlog:hover{
+    background: var(--darkgray);
+}
+
+.login-register{
+    font-size: 1.5rem;
+    color: var(--darkgray);
+    text-align: center;
+    margin: 25px 0 0px;
+}
+
+.login-register p a{
+    color: var(--darkestyellow);
+    text-decoration: none;
+    font-weight: 100;
+    animation: colorChangetxt 3s infinite alternate;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+    color: var(--starrred);
+}
+
+/* Style the file input box within .browse */
+.browse input[type="file"] {
+    text-transform: uppercase;
+    width: 99%;
+    height: 23px; 
+    background-color: var(--darkestyellow);
+    color: var(--darkgray);
+    padding: 2.5px; 
+    cursor: pointer;
+    overflow: hidden;
+}
+/* Login Form Div Ends */
+
+/* Home Section Starts */
+.home {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 1.5rem;
+    min-height: 100vh; /* Ensure the container takes the full viewport height */
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+    /* padding-top: 6.5rem; */
+}
+
+.home .image {
+    margin-top: 50px;
+    flex: 1 1 10rem;
+    position: relative;
+    width: 500rem; /* Adjust the width as needed */
+    height: 100%; /* You may need to adjust this value based on the animation */
+}
+
+.home .image img {
+    position: relative;
+    width: 100%;
+    animation: float 1.5s linear infinite;
+    border-radius: 3rem;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(1.5rem);
+    }
+}
+
+
+.home .content h3{   
+    font-size: 5rem;
+    color: var(--darkestyellow);
+    text-transform: uppercase;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 1); 
+}
+
+.home .content .welcome-text{
+    height: 75px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+/* Animation for initial text */
+.home .content .welcome-text li{
+    position: relative;
+    top: 0;
+    color: var(--white);
+    list-style: none;
+    animation: slide 20s steps(5) infinite /*, 
+    colorful 6s infinite;*/
+}
+
+@keyframes slide {
+    100% {
+        top: -450px;
+    }
+}
+
+/* @keyframes colorful {
+    100% {
+        filter: hue-rotate(360deg);
+    }
+} */
+
+.home .content .welcome-text li span{
+    position: relative;
+}
+
+.home .content .welcome-text li span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65px;
+    width: 1000px;
+    /* background: var(--white);
+    border-left: 2px solid var(--darkestyellow);
+    animation: typing 2s steps(25) infinite alternate; */
+}
+
+@keyframes typing {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+  
+/* Animation for letter spans */
+.disco-text {
+    animation: colorChangetxt 2s infinite alternate, letterDelay 2s infinite alternate;
+    display: inline-block;
+}
+
+/* Animation for color changes */
+@keyframes colorChangetxt {
+    0% {
+      color: var(--starrred);
+    }
+    25% {
+      color: var(--starryellow);
+    }
+    50% {
+      color: var(--starrcyan);
+    }
+    75% {
+      color: var(--starrlime);
+    }
+    100% {
+      color: var(--starrmagenta);
+    }
+}
+
+.disco-text[style*="--letter-delay"] {
+    animation-delay: var(--letter-delay);
+}
+
+/* Animation for delayed */
+@keyframes letterDelay {
+    0% {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+
+    20% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translateY(5px);
+    }
+
+    60% {
+        opacity: 1;
+        transform: translateY(-5px);
+    }
+
+    80% {
+      opacity: 1;
+      transform: translateY(5px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(-5px);
+    }
+}
+
+/* Starr Fas Animation */
+#star {
+    color: var(--darkyellow);
+    animation: spin 5s linear infinite; /* Initially paused */
+    /* Additional styling for the element, if needed */
+  }
+  
+  /* Define a CSS animation for the spin effect */
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+.home .content p{
+    font-family: 'Lilita One';
+    font-size: 1.7rem;
+    color: var(--darkgray);
+    padding: 1rem 0;
+    text-transform: none;
+}
+/* Home Section Ends */
+
+/* Shop Section Starts */
+.shop .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.shop .box-container .box{
+    padding: 2rem;
+    background: var(--lightyellow);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    border-radius: .5rem;
+    text-align: center;
+    flex: 1 1 30rem;
+}
+
+.shop .box-container .box img{
+    height: 25rem;
+    object-fit: cover;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.shop .box-container .box .price{
+    position: absolute;
+    background: var(--starrcyan);
+    animation: colorChangebg 4s infinite alternate;
+    color: var(--white);
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    text-shadow: 0px 3px 5px rgba(0, 0, 0, 1); 
+}
+
+.shop .box-container .box h3{
+    background: var(--black);
+    color: var(--white);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.shop .box-container .box p{
+    color: var(--darkgray);
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-transform: none;
+}
+
+.shop .box-container .box .stars i{
+    color: var(--darkestyellow);
+    font-size: 2rem;
+    padding: 0.3rem;
+    animation: spin 5s infinite alternate;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(90deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+    75% {
+      transform: rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+/* Shop Section Ends */
+
+/* Steps Section Starts*/
+.steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .1rem;
+    padding: 1rem;
+    background: url('../images/welcome.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+  
+.steps .box{
+    flex: 1 1 10rem;
+    padding: 1rem;
+    text-align: center;
+}
+  
+.steps .box img{
+    background: var(--lightyellow);
+    border-radius: 50%;
+    border: .3rem solid var(--lightgray);
+    box-shadow: 0 .8rem 10rem rgba(0, 0, 0, .1);
+    height: 15rem;
+    width: 15rem;
+}
+  
+.steps .box h3{
+    font-size: 2.5rem;
+    color: var(--darkgray);
+    padding: 1rem ;
+}
+/* Steps Section Ends*/
+
+/* Feature Section Starts */
+.feature .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.feature .box-container .box{
+    height: 200px;
+    flex: 1 1 30rem;
+    border: .5rem solid var(--darkyellow);
+    box-shadow: 0 .5 1rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    animation: colorChangebrdr 3.5s infinite alternate;
+}
+
+.feature .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feature .box-container .box .content{
+    position: absolute;
+    top: -100%; 
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(184, 184, 184, 0.8);
+    text-align: center;
+}
+
+.feature .box-container .box .content h3{
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+
+.feature .box-container .box .content p{
+    font-size: 1.5rem;
+    color: var(--black);
+    padding: 1rem;
+    text-transform: none;
+}
+
+.feature .box-container .box:hover .content{
+    top: 0;
+}
+
+/* Animation for color border changes */
+@keyframes colorChangebrdr {
+    0% {
+      border-color: var(--starrred);
+    }
+    25% {
+      border-color: var(--starryellow);
+    }
+    50% {
+      border-color: var(--starrcyan);
+    }
+    75% {
+      border-color: var(--starrlime);
+    }
+    100% {
+      border-color: var(--starrmagenta);
+    }
+}
+/* Feature Section Starts */
+
+/* Events Section Starts */
+.events .box-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.events .box-container .box{
+    flex: 1 1 25rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    border: .1rem solid rgba(0, 0, 0, .3);
+    cursor: pointer;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.events .box-container .box .image{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: -100%;
+    left: 0;
+}
+
+.events .box-container .box .content{
+    text-align: center;
+    background: var(--lightyellow);
+    padding: 2rem 2rem 5rem;
+}
+
+.events .box-container .box .content img{
+    margin: 1.5rem 0;
+}
+
+.events .box-container .box .content h3{
+    background: var(--black);
+    color: var(--white);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 0 5px 0 5px;
+}
+
+.events .box-container .box .content p{
+    font-size: 1.3rem;
+    text-transform: none;
+    color: var(--darkgray);
+    padding: 1rem;
+}
+
+.events .box-container .box:hover .image{
+    top: 0;
+}
+
+.events .box-container .box:hover .content{
+    transform: translateY(150%);
+}
+/* Events Section Ends */
+
+/* Slider Section Starts */
+.brawlers .wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    position: relative;
+    align-items: center;
+}
+
+.wrapper i{
+    height: 50px;
+    width: 50px;
+    background: var(--darkestyellow);
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    font-size: 2rem;
+    transform: translateY(-50%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .23);
+    color: var(--white);
+}
+
+.wrapper i:hover{
+    animation: colorChangebg 4s infinite alternate;
+}
+
+.wrapper i:first-child{
+    left: -22px;
+}
+
+.wrapper i:last-child{
+    right: -22px;
+}
+
+.wrapper .carousel{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    gap: 16px;
+    scroll-behavior: smooth;
+    
+    /* code for automatically centered when dragging  */
+    overflow-x: hidden;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; /* Remember, it should be scrollbarr-width: none, not 0. Otherwise small scrollbar will be shown at the bottom. */
+}
+
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card{
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel.dragging{
+    scroll-behavior: auto; /* remove smooth scroll behavior when dragging */
+    scroll-snap-type: none;
+}
+
+.carousel :where(.card, .img){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel .card{
+    scroll-snap-align: start;
+    height: 450px;
+    list-style: none;
+    background: var(--lightyellow);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.card .img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--primaryyellow);
+}
+
+.card img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card h2{   
+    /* text-shadow: 0px 3px 5px rgba(0, 0, 0, 1);  */
+    color: var(--black);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.card p{
+    color: var(--darkgray);
+    font-size: 1.5rem;
+    text-align: center;
+    text-transform: none;
+    padding: 10px;
+}
+/* Events Section Ends */
+
+/* Footer Section Starts */
+.footer{
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.footer .share i{
+    font-size: 2.5rem;
+    font-weight: 100;
+    display: flex;
+    color: var(--primaryyellow);
+    align-items: center;
+    position: relative;
+}
+
+.footer .share i:hover{
+    color: var(--white);
+    cursor: pointer;
+    animation: colorChangetxt 3.5s infinite alternate;
+}
+
+.footer .credit{
+    padding: 1rem;
+    color: var(--white);
+    font-weight: normal;
+    font-size: 1.5rem; 
+    font-weight: 100;
+}
+
+.footer .credit span{
+    color: var(--primaryyellow);
+}
+/* Footer Section Ends */
+
+/* Scroll Top Starts */
+#scroll-top{
+    position: fixed;
+    top: -120%;
+    right: 2.5rem;
+    padding: .5rem 1.5rem;
+    font-size: 4rem;
+    background: var(--darkgray);
+    color: var(--white);
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 99;
+}
+
+#scroll-top:hover{
+    animation: colorChangebg 4s infinite alternate;
+}
+
+#scroll-top.active{
+    top:calc(100% - 12rem);
+}
+/* Scroll Top Ends */
+
+/* Loader Starts */
+.load-container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999999;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+.load-container.fade-out{
+     top: -120%;
+}
+/* Loader Ends */
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+/* @media(max-width:2560px){
+    html{
+        font-size: 100%;
+    }
+
+    header::before {
+        border-width: 200px 150px 0px 950px;
+    }
+
+    header .navbar a{
+       font-size: 2.5rem;
+    }
+
+    header .navbar .btnLogin-popup{
+        font-size: 2.5rem;
+        width: 200px;
+        height: 55px;
+    }
+
+    .home .content .welcome-text span{
+        font-size: 5rem;
+    }
+
+    .home .content p{
+        font-size: 1.8rem;
+    }
+
+    .home .image img{
+        height: 100%;
+        width: 50%;
+
+
+    }
+} */
+
+
+
+
+
+
+
+
+@media screen and (max-width:1300px){
+    header .logo{
+        color: var(--white);
+        font-size: 3rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        z-index: 9999;
+    }
+    
+    header .logo i{
+        color: var(--primaryyellow);
+        margin: .5rem;
+    }
+
+    #menu-bar{
+        display: initial;
+        font-size: 3rem;
+        margin-right: 5rem;
+    }
+
+    header .navbar{
+      position: absolute;
+      padding: 1rem;
+      top: 100%;
+      left: 50%;
+      right: 0;
+      background-color: rgba(255, 194, 0, 0.5);
+      border-right: 1.5rem solid rgba(0, 0, 0, 0.1);
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      text-align: center;
+    }
+
+    header .navbar .btnLogin-popup{
+        padding: 1.5rem;
+        width: 100%;
+        height: 50px;
+        z-index: 1;
+    }
+
+    header .navbar.active{
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        margin: .5rem;
+        padding: 1rem;
+        display: block;
+        border: 0.2rem solid rgba(205, 250, 0, 0.1);
+        border-left: .5rem solid var(--darkgray);
+        background: var(--darkestyellow);
+        color: var(--white);
+        text-align: center;
+        font-weight: 100;
+    }
+
+    header .navbar a:hover::after{
+        display: none;
+    }
+
+    header .navbar a:hover{
+        background: var(--darkyellow);
+    }
+
+    header::before {
+        border-width: 135px 150px 0px 600px;
+    }
+
+    .loginwrapper.active-popup{
+        width: 30%;
+        height: 75%;
+    }
+
+    .form-box.register{
+        width: 30%;
+        height: 75%;
+    }
+}   
+
+@media screen and (max-width: 900px){
+    .wrapper .carousel{
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+
+    #home {
+        display: flex;
+        padding-top: 3rem;
+    }
+    
+    .home {
+        display: flex;
+        flex: 1; /* Allow the home container to take available space */
+    }
+    
+    .home .image {
+        flex: 0 0 300px; /* Set a fixed width for the image container */
+    }
+    
+    .home .image img {
+        width: 100%; /* Make the image fill the container width */
+        height: auto; /* Maintain the aspect ratio of the image */
+    }
+    
+    .home .content {
+        flex: 1; /* Allow the content to take available space */
+    }
+    
+    .home .content h3 {
+        font-size: 4.3rem;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .home .content i {
+        font-size: 3rem;
+    }
+    
+    .home .content p {
+        font-size: 1.5rem;
+    } 
+}
+
+@media screen and (max-width: 768px) {
+
+    .home .image img {
+        width: 100%; /* Make the image fill the container width */
+    }
+
+    header::before {
+        border-width: 110px 200px 0px 400px;
+    }
+
+    header .navbar a {
+        font-size: 1.5rem;
+    }
+
+    header .logo {
+        font-size: 2.5rem;
+    }
+
+    .home .content h3 {
+        font-size: 3.5rem;
+    }
+
+    .home .content p {
+        padding-top: 25px;
+        font-size: 1.5rem;
+    }
+
+    #scroll-top{
+        position: fixed;
+        font-size: 3rem;
+        top: -120%;
+        right: 2.5rem;
+        z-index: 99;
+    }
+
+    #scroll-top.active{
+        top:calc(100% - 8rem);
+    }
+
+    .steps .box {
+        
+    }
+}
+
+@media screen and (max-width: 694px){
+
+    .home .content h3 {
+        text-align: center;
+        margin-top: 8rem;
+        font-size: 5rem;
+    }
+
+    .home .content p{
+        text-align: center;
+    }
+
+    .home .image {
+        margin: 0;
+        flex: 0 0 50rem; /* Set a fixed width for the image container */
+    }
+}
+
+@media screen and (max-width: 600px){
+    .wrapper .carousel{
+        grid-auto-columns: 100%;
+    }
+
+    .home .image {
+        flex: 0 0 25rem; /* Set a fixed width for the image container */
+    }
+}
+
+@media screen and (max-width: 540px){
+    header::before {
+        border-width: 115px 220px 0px 320px;
+    }
+
+    #menu-bar {
+        font-size: 2rem;
+        margin-right: 25px;
+        color: var(--white);
+        background: var(--darkgray);
+    }
+
+    #scroll-top{
+        font-size: 2rem;
+    }
+
+    #scroll-top.active{
+        top:calc(100% - 5rem);
+    }
+}
+
+@media screen and (max-width: 425px){
+    header::before {
+        border-width: 100px 150px 0px 300px;
+    }
+
+    header .logo{
+        font-size: 2rem;  
+    }
+
+    header #star{
+        font-size: 1rem;
+        margin: 5px;
+        padding: 0;
+        text-align: center;
+    }
+
+    header a{
+        padding: 0;  
+    }
+
+    .home .content h3 {
+        font-size: 4rem;
+    }
+
+    #menu-bar {
+        margin-right: 15px;
+        color: var(--white);
+        background: var(--darkgray);
+    }
+}   

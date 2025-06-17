@@ -23,9 +23,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=9(8_)poq3+pbi4zh9a9t5^s^=c^aw$#cb+jz9fjba^^2-8-%7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = True  # or False, depending on your environment
 
-ALLOWED_HOSTS = []
+if DEBUG:
+    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+else:
+    ALLOWED_HOSTS = ['starrpark.vercel.app']
+
+
+ALLOWED_HOSTS = ['starrpark.vercel.app', 'localhost', '127.0.0.1']
 
 from pathlib import Path
 import os
