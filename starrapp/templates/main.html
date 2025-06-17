@@ -1,0 +1,872 @@
+<!-- {% load static %} -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome To Starr Park!</title>
+
+    <!-- Website Icon Link -->
+     <link rel="icon" type="image/png" href="{% static 'images/favicon.ico' %}"/>
+    
+    <!-- External CSS File Link -->
+     <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" /> 
+
+    <!-- External JAVASCRIPT File Link  -->
+     <script src="{% static 'js/mainscript.js' %}" defer></script> 
+    <!-- Remember to add defer attribute in the script. It tells the browser to wait until the page has finished 
+    parsing before executing the script -->
+
+    <!-- Font Awesome CDN Link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Ionicons Link -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
+
+  <body>
+    <!-- Header Section Starts -->
+    <header>
+      <a href="#home" class="logo">
+        <h3>
+          <i class="fa-solid fa-star" id="star"></i>STARR PARK<i
+            class="fa-solid fa-star"
+            id="star"
+          ></i>
+        </h3>
+      </a>
+
+      <div id="menu-bar" class="fa-solid fa-bars"></div>
+
+      <nav class="navbar">
+        <a href="#shop">Shop</a>
+        <a href="#feature">Features</a>
+        <a href="#events">Events</a>
+        <a href="#brawlers">Feedback</a>
+
+        <button class="btnLogin-popup" id="btnLogin-popup">Login</button>
+      </nav>
+    </header>
+    <!-- Header Section Ends -->
+
+    <!-- Home Section Starts -->
+    <section class="home" id="home">
+      <div class="content">
+        <h3>
+          <ul class="welcome-text">
+            <li><span>Welcome to</span></li>
+            <li><span>Join us at</span></li>
+            <li><span>Cheerish at</span></li>
+            <li><span>Choose</span></li>
+            <li><span>2QLYCYGL</span></li>
+          </ul>
+          <span class="disco-text">S</span
+          ><span class="disco-text" style="--letter-delay: 0.1s">T</span
+          ><span class="disco-text" style="--letter-delay: 0.2s">A</span
+          ><span class="disco-text" style="--letter-delay: 0.3s">R</span
+          ><span class="disco-text" style="--letter-delay: 0.4s">R</span
+          >&thinsp;<span class="disco-text" style="--letter-delay: 0.5s">P</span
+          ><span class="disco-text" style="--letter-delay: 0.6s">A</span
+          ><span class="disco-text" style="--letter-delay: 0.7s">R</span
+          ><span class="disco-text" style="--letter-delay: 0.8s">K</span>
+          <i class="far fa-star" id="star"></i>
+        </h3>
+        <p>
+          Welcome to Project Starr Park, a place where dreams come true! Our
+          captivating digital portal invites you to immerse yourself in
+          boundless joy and create cherished memories. Step into the magic and
+          embark on an unforgettable adventure. We can't wait to share this
+          incredible experience with you!
+        </p>
+      </div>
+
+      <div class="image">
+        <img
+          src="{% static 'images/favicon.ico' %}"
+          alt="Starr_Park_Logo1"
+          class="image1"
+        />
+      </div>
+    </section>
+    <!-- Home Section Ends -->
+
+    <!-- Steps Section Start -->
+    <section class="steps">
+      <div class="box">
+        <img src="{% static 'images/steps/Happy_Trophy.gif' %}" alt="Run" />
+        <h3>RUN</h3>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'images/steps/Game_Trophy.gif' %}" alt="Brawl" />
+        <h3>BRAWL</h3>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'images/steps/Sad_Trophy.gif' %}" alt="Explode" />
+        <h3>EXPLODE!</h3>
+      </div>
+
+      <div class="box">
+        <img src="{% static 'images/steps/Love_Trophy.gif' %}" alt="#LifeGoals" />
+        <h3>#LifeGoals</h3>
+      </div>
+    </section>
+    <!-- Steps Section End -->
+
+    <!-- Login Form Div Starts -->
+    <div class="loginwrapper">
+      <span class="icon-close">
+        <ion-icon name="close"></ion-icon>
+      </span>
+
+      <div class="form-box login">
+        <form action="" method="POST">
+          <h2>LOGIN NOW</h2>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="email" class="box" required />
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" name="pass" class="box" required />
+            <label>Password</label>
+          </div>
+
+          <div class="remember-forgot">
+            <label><input type="checkbox" class="remember" />Remember Me</label>
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btnlog" name="submit">Login</button>
+
+          <div class="login-register">
+            <p>
+              Don't have an account?
+              <a href="javascript:void(0)" class="register-link">REGISTER</a>
+            </p>
+          </div>
+        </form>
+      </div>
+
+      <div class="form-box register">
+        <form action="" enctype="multipart/form-data" method="POST">
+          <h2>REGISTRATION</h2>
+          <div class="input-box">
+            <span class="icon"><ion-icon name="person-sharp"></ion-icon></span>
+            <input type="text" name="name" class="box" required />
+            <label>Username</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="mail"></ion-icon></span>
+            <input type="email" name="email" class="box" required />
+            <label>Email</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"><ion-icon name="lock-closed"></ion-icon></span>
+            <input type="password" name="pass" class="box" required />
+            <label>Password</label>
+          </div>
+
+          <div class="input-box">
+            <span class="icon"
+              ><ion-icon name="shield-checkmark-sharp"></ion-icon
+            ></span>
+            <input type="password" name="cpass" class="box" required />
+            <label>Confirm Password</label>
+          </div>
+
+          <div class="browse">
+            <div class="input-box">
+              <input
+                type="file"
+                id="fileInput"
+                name="image"
+                class="box"
+                required
+                accept="image/jpg, image/jpeg, image/png"
+              />
+            </div>
+          </div>
+
+          <!-- <div class="remember-forgot">
+            <label
+              ><input type="checkbox" class="terms" />I agree to terms &
+              conditions.</label
+            >
+          </div> -->
+
+          <div>
+            <button type="submit" class="btnreg" name="register_submit">
+              Register
+            </button>
+          </div>
+
+          <div class="login-register">
+            <p>
+              Already have an account?
+              <a href="javascript:void(0)" class="login-link">LOGIN</a>
+            </p>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Login Form Div Ends -->
+
+    <!-- Shop Section Starts -->
+    <section class="shop" id="shop">
+      <h1 class="heading">Popular<span> shop</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <span class="price"> P150 </span>
+          <img src="{% static 'images/shop/souvenir1.png' %}" alt="Starr Hat" />
+          <h3>Starr Hat</h3>
+          <p>
+            This is the genuine Starr Park Hat, a true original from Starr Park
+            Kids. It showcases your connection to the world of Starr Park.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P500 </span>
+          <img
+            src="{% static 'images/shop/souvenir2.png' %}"
+            alt="Starr Park Shirt"
+          />
+          <h3>Starr Park Shirt</h3>
+          <p>
+            This is a vintage Starr Park T-shirt, in very clean condition. It is
+            a classic piece that embodies the spirit of Starr Park.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P50 </span>
+          <img
+            src="{% static 'images/shop/souvenir3.png' %}"
+            alt="Starr Park Balloon"
+          />
+          <h3>Starr Park Balloon</h3>
+          <p>
+            This is the Starr Park Star Balloon, in perfect shape and still
+            inflated with its original air. It adds a touch of magic to any
+            occasion.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P350 </span>
+          <img src="{% static 'images/shop/souvenir4.png' %}" alt="Mr. P Plushie" />
+          <h3>Mr. P Plushie</h3>
+          <p>
+            This is Mr. P from Brawl Stars, a plush penguin stuffed animal. It
+            is a First Edition with a small burn under the right flipper, but
+            still holds its charm.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P50 </span>
+          <img src="{% static 'images/shop/souvenir5.png' %}" alt="Bo Eagle Hat" />
+          <h3>Bo's Eagle Hat</h3>
+          <p>
+            This is Bo's Eagle Hat in Brawl Stars. It features an angry-looking
+            eagle design and is gently used. It adds a fierce touch to Bo's
+            character in the game.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P200 </span>
+          <img src="{% static 'images/shop/souvenir6.png' %}" alt="Tin Lunch Box" />
+          <h3>Tin Lunch Box</h3>
+          <p>
+            This limited-edition Tin Lunch Box Luggage is a collector's item
+            with lunch traces still visible. It comes in various colors.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P350 </span>
+          <img
+            src="{% static 'images/shop/souvenir7.png' %}"
+            alt="Small Starr Park Spaceship"
+          />
+          <h3>Starr Park Spaceship</h3>
+          <p>
+            The Small Starr Park Spaceship/Flying Saucer is a tiny vessel that
+            is not very useful due to its small size. It lacks significant
+            features and does not perform well.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P250 </span>
+          <img
+            src="{% static 'images/shop/souvenir8.png' %}"
+            alt="Starr Park Keychains"
+          />
+          <h3>Starr Park Keychains</h3>
+          <p>
+            The Starr Park Keychain shop feature the names of favorite brawlers,
+            but they often run out of stock, including keychains with specific
+            names, like yours.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+
+        <div class="box">
+          <span class="price"> P350 </span>
+          <img
+            src="{% static 'images/shop/souvenir9.png' %}"
+            alt="Summer-esque Shovel"
+          />
+          <h3>Poco's Small Guitar</h3>
+          <p>
+            This is a Starr Park Guitar Instrument with two missing strings.
+            Despite that, it can still be played to create simple songs.
+          </p>
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+          </div>
+          <a href="javascript:void(0)" class="btnLogin-popup" id="btnshop"
+            >Order Now!</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Shop Section Ends -->
+
+    <!-- Feature Section Starts -->
+    <section class="feature" id="feature">
+      <h1 class="heading">Attractions & <span>Features </span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img src="{% static 'images/features/Gold_Arm_Gang.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Wild West</h3>
+            <p>
+              Gold Arm Gang Wild West: Duels, Saloons, Gold Rush Adventures.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Snowtel.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Snowtel</h3>
+            <p>
+              Snowtel in Starr Park is a captivating winter for thrilling icy
+              battles.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Rumble_Jungle.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Rumble Jungle</h3>
+            <p>
+              It's a thrilling and untamed realm of dense foliage and exotic
+              creatures.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Meet_Lola.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Meet Lola</h3>
+            <p>
+              Meet the Starr Park's diva Lola dazzles with mesmerizing
+              performances.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img src="{% static 'images/features/Meg_Workshop.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Meg's Workshop</h3>
+            <p>
+              Meg's Workshop in Starr Park: Unleash creativity, power up
+              Brawlers.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Arcade.jpg' %}" alt="" />
+          <div class="content">
+            <h3>The Brawl-i-cade</h3>
+            <p>
+              Starr Park's Arcade offers thrilling interactive entertainment for
+              all.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Mortis_Mortuary.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Mortis Mortuary</h3>
+            <p>
+              Embrace the darkness of Mortis Mortuary in a thrilling battles in
+              an eerie setting.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Candy_Land.jpg' %}" alt="" />
+          <div class="content">
+            <h3>Mandy's Candyland</h3>
+            <p>
+              Visit Mandy's Candy Land: Sweet battles in a colorful
+              confectionery paradise.
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <img src="{% static 'images/features/Retropolis.png' %}" alt="" />
+          <div class="content">
+            <h3>Retropolis</h3>
+            <p>
+              Step into a retro-futuristic world filled with neon lights and
+              thrilling battles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Feature Section Ends  -->
+
+    <!-- Events Section Starts -->
+    <section class="events" id="events">
+      <h1 class="heading">Our <span>Daily Events</span></h1>
+
+      <div class="box-container">
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Gem_Grab_Gameplay.gif' %}"
+            alt="Gem Grab Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Gem_Grab_Icon.png' %}"
+              alt="Gem Grab Icon"
+            />
+            <h3>Gem Grab</h3>
+            <p>
+              Collect Gems that pop out of the Gem Mine in the middle of the
+              map. Or, just take them from fallen opponents! Hold ten gems for
+              the duration of a countdown to win the game!
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Solo_Showdown_Gameplay.gif' %}"
+            alt="Solo Showdown Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Solo_Showdown_Icon.png' %}"
+              alt="Solo Showdown Icon"
+            />
+            <h3>Solo Showdown</h3>
+            <p>
+              Enter the thrilling Showdown Arena, where the bravest warriors
+              face off in a fierce battle for survival, fighting until only one
+              remains victorious.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Brawl_Ball_Gameplay.gif' %}"
+            alt="Brawl Ball Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Brawl_Ball_Icon.png' %}"
+              alt="Brawl Ball Icon"
+            />
+            <h3>Brawl Ball</h3>
+            <p>
+              Take the ball to the opposing team's goal to score! Match ends
+              when one team scores two goals, or at full time with the match
+              ending after two goals or at full time.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Bounty_Gameplay.gif' %}"
+            alt="Bounty Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Bounty_Icon.png' %}"
+              alt="Bounty Icon"
+            />
+            <h3>Bounty</h3>
+            <p>
+              Collect Stars for your team by defeating players on the enemy
+              team. Every time you defeat an enemy, the bounty on your head
+              increases by one Star, up to seven Stars.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Heist_Gameplay.gif' %}"
+            alt="Heist Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Heist_Icon.png' %}"
+              alt="Heist Icon"
+            />
+            <h3>Heist</h3>
+            <p>
+              Protect your team's valuable safe, while trying to break open the
+              enemy team's safe at the same time! Whichever team busts open the
+              enemy safe first wins.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Siege_Gameplay.gif' %}"
+            alt="Siege Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Siege_Icon.png' %}"
+              alt="Siege Icon"
+            />
+            <h3>Siege</h3>
+            <p>
+              Besiege and destroy the enemy's IKE assembly turret! Your team
+              also has an IKE: feed it bolts, and it will assemble a powerful
+              Siege Robot to fight for you.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Hot_Zone_Gameplay.gif' %}"
+            alt="Hot Zone Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Hot_Zone_Icon.png' %}"
+              alt="Hot Zone Icon"
+            />
+            <h3>Hot Zone</h3>
+            <p>
+              Capture each point by staying in Hot Zone. The first team to
+              completely capture all points on the map wins! If the timer runs
+              out, the most captured team will decleare as winner.
+            </p>
+          </div>
+        </div>
+
+        <div class="box">
+          <img
+            class="image"
+            src="{% static 'images/events/Volley_Brawl_Gameplay.gif' %}"
+            alt="Volley Brawl Event"
+          />
+          <div class="content">
+            <img
+              src="{% static 'images/events_icon/Volley_Brawl_Icon.png' %}"
+              alt="Volley Brawl Icon"
+            />
+            <h3>Volley Brawl</h3>
+            <p>
+              Score points by making the ball land on the opponent's side of the
+              field. First team to 2 points wins! The longer the ball stays in
+              play, the faster it will fly!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Events Section Ends -->
+
+    <!-- Slider Section Starts -->
+    <section class="brawlers" id="brawlers">
+      <h1 class="heading">Brawler <span>Feedback!</span></h1>
+
+      <div class="wrapper">
+        <i id="left" class="fa-solid fa-angle-left"></i>
+        <ul class="carousel">
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/8Bit.png' %}"
+                alt="8Bit"
+                draggable="false"
+              />
+              <!-- Remember to add draggable=false to img so it won't drag when dragging -->
+            </div>
+            <h2>8 Bit</h2>
+            <p>
+              8-Bit: Super Rare Brawler, high health, slow movement, powerful
+              long-ranged laser attacks, Super boosts damage for himself and
+              nearby allies.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Amber.png' %}"
+                alt="Amber"
+                draggable="false"
+              />
+            </div>
+            <h2>Amber</h2>
+            <p>
+              Amber: Legendary Brawler, fiery nature, moderate health, high
+              damage, continuous long-ranged stream of fire.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Ash.png' %}"
+                alt="Ash"
+                draggable="false"
+              />
+            </div>
+            <h2>Ash</h2>
+            <p>
+              Ash: Versatile Brawler, high health, variable damage, Rage bar
+              fills with damage dealt or received, grants speed and damage
+              boosts.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Barley.png' %}"
+                alt="Barley"
+                draggable="false"
+              />
+            </div>
+            <h2>Barley</h2>
+            <p>
+              Barley: Rare Brawler, low health, high damage potential, throws
+              harmful liquid bottles that create damaging puddles to
+              continuously harm enemies within.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Bea.png' %}"
+                alt="Bea"
+                draggable="false"
+              />
+            </div>
+            <h2>Bea</h2>
+            <p>
+              Bea: High damage, low health, long-ranged attacks, charged shots,
+              fast reload, single ammo slot.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Belle.png' %}"
+                alt="Belle"
+                draggable="false"
+              />
+            </div>
+            <h2>Belle</h2>
+            <p>
+              Belle: Moderate damage, low health, long-ranged attacks,
+              ricocheting bolts, swift reload.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Bibi.png' %}"
+                alt="Bibi"
+                draggable="false"
+              />
+            </div>
+            <h2>Bibi</h2>
+            <p>
+              Bibi: Home Run bar, baseball bat attacks, bouncing ball of gum
+              Super.
+            </p>
+          </li>
+
+          <li class="card">
+            <div class="img">
+              <img
+                src="{% static 'images/brawler_pins/Bo.png' %}"
+                alt="Bo"
+                draggable="false"
+              />
+            </div>
+            <h2>Bo</h2>
+            <p>Bo: Explosive arrows, revealing hidden enemies with Super.</p>
+          </li>
+        </ul>
+        <i id="right" class="fa-solid fa-angle-right"></i>
+      </div>
+    </section>
+    <!-- Slider Section Ends -->
+
+    <!-- Footer Section Starts -->
+    <section class="footer">
+      <div class="share">
+        <a href="https://www.facebook.com" class="btnfooter"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a href="https://www.twitter.com" class="btnfooter"
+          ><i class="fa-brands fa-twitter"></i
+        ></a>
+        <a href="https://www.instagram.com" class="btnfooter"
+          ><i class="fa-brands fa-instagram"></i
+        ></a>
+        <a href="https://www.youtube.com" class="btnfooter"
+          ><i class="fa-brands fa-youtube"></i
+        ></a>
+      </div>
+
+      <h1 class="credit">
+        Created By: <span> #2QLYCYGL</span>| © 2023 Brawl Stars, All Rights
+        Reserved
+      </h1>
+    </section>
+
+    <!-- Footer Section Ends -->
+
+    <!-- Scroll Top Button -->
+    <a href="#home" class="fas fa-angle-up" id="scroll-top"></a>
+
+    <!-- Loader -->
+    <div class="load-container">
+      <img src="{% static 'images/loader/Pulse.gif' %}" alt="WELCOME TO STARR PARK" />
+  </body>
+</html>
